@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Carrinho de Compras</title>
+</head>
+<body>
+    <header>
+        <h1>Carrinho de Compras</h1>
+        <a href="index.html"><button>Voltar às Compras</button></a>
+    </header>
+    
+    <section id="carrinho-produtos">
+        <h2>Produtos no Carrinho</h2>
+        <div id="lista-produtos">
+            <!-- Produtos serão carregados aqui via JavaScript -->
+        </div>
+    </section>
+    
+    <section id="cep-section">
+        <h2>Informações de Entrega</h2>
+        <div>
+            <label for="cep-input">Digite seu CEP:</label>
+            <input type="text" id="cep-input" placeholder="00000-000" maxlength="9">
+            <button id="buscar-cep">Buscar CEP</button>
+        </div>
+        <div id="endereco-info" style="display: none;">
+            <h3>Endereço de Entrega:</h3>
+            <p id="logradouro"></p>
+            <p id="bairro"></p>
+            <p id="cidade-estado"></p>
+        </div>
+    </section>
+    
+    <section id="resumo-pedido">
+        <h2>Resumo do Pedido</h2>
+        <div>
+            <p>Total de Itens: <span id="total-itens">0</span></p>
+            <p>Valor Total: R$ <span id="valor-total">0,00</span></p>
+            <button id="confirmar-pedido" disabled>Confirmar Pedido</button>
+        </div>
+    </section>
+    
+    <script src="carrinho.js"></script>
+</body>
+</html>
